@@ -1,15 +1,16 @@
-Project Description – E-199 Emergency Response System
+E-199 is a university project developed for the HY359 "Web Programming" course at the University of Crete. It implements a web-based emergency incident management system designed to coordinate emergency events (such as fires) and facilitate communication between users, volunteers, and the fire department.
 
-The E-199 platform is a web-based emergency incident management system developed as part of the HY359 "Web Programming" course at the University of Crete. The main goal of the project is to provide a dynamic, interactive system that supports the coordination of emergency events (such as fires) and enhances communication between citizens, volunteers, and emergency authorities.
+The platform supports four types of users: administrators, registered users, volunteer firefighters, and guests. Each user role has access to specific functionality based on their privileges.
 
-The system supports four types of users: administrators (fire department), registered users, volunteer firefighters, and guests. Each user has access to specific features tailored to their role.
+Administrators manage the full lifecycle of incidents: they validate reports, assign volunteers, update incident status, communicate via public/private messages, and monitor statistics using visual tools like Google Charts.
 
-Administrators have full control of the system: they validate incident reports, coordinate actions, assign volunteers, send public or private messages, and monitor statistics via visual tools like Google Charts. They are the only ones who can change the status of an incident (e.g., from “submitted” to “running” or “finished”).
+Registered users can create an account, submit incident reports with location information (address or GPS), receive alerts for nearby events, and message admins during active emergencies.
 
-Registered users can create accounts, report incidents with full location data (address or GPS), receive alerts for nearby events based on geolocation, and communicate with admins about ongoing emergencies. Volunteer firefighters can declare availability for missions and communicate with the admin through a secure message system. They can also view their participation history and receive updates about active events.
+Volunteer firefighters can register, view available missions, declare participation, exchange messages with the admin, and review their response history.
 
-Guests are allowed to report incidents without authentication by providing only basic information such as phone number and location. All users can view active incidents on a map and access helpful resources and external links. The system may also optionally integrate the ChatGPT API to provide intelligent safety tips and guidance.
+Guests are allowed to report incidents without logging in by providing basic information such as phone number and location. All users can view live incident data on a map and access external resources or information links. Integration with the ChatGPT API is optionally available for safety tips and real-time guidance.
 
-From a technical perspective, the system uses Java Servlets and JSP for server-side logic, HTML/CSS/JavaScript for the client-side, and AJAX/REST for dynamic data interaction. A MySQL database supports persistent storage of users, events, and communication.
+Technically, the system is built using Java Servlets and JSP on the backend, HTML/CSS/JavaScript on the frontend, and AJAX/REST for asynchronous communication. A MySQL database is used to store users, incidents, messages, and system data.
 
-E-199 aims to simulate a realistic emergency coordination platform, with emphasis on usability, clarity, and functional completeness. It combines real-time interaction, user-role separation, geolocation services, and asynchronous communication to support effective emergency response simulation on a modern web architecture.
+E-199 is designed as a realistic simulation of an emergency coordination system, combining modern web technologies, user-role logic, and real-time data flow. The goal is to deliver a clear, responsive, and practical web platform that showcases key web development skills in a critical real-world scenario.
+
