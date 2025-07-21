@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Μιχάλης Γερογιαννάκης, Μάριος Βολονάκης">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="js/incidents.js"></script>
+  <script src="js/logged.js"></script>
+  <script src="js/message.js"></script>
+  <link rel="stylesheet" href="css/incidents.css">
+  <iframe src="map.html" style="width: 30%; height: 100vh; border: none; position: fixed; left: 0; top: 0;"></iframe>
+
+  <title>Σελίδα Συμβάντων</title>
+
+</head>
+<body>
+
+<h1>Φόρμα Αναφοράς Συμβάντος</h1>
+
+<form id="incidentForm">
+  <label for="incident_type">Τύπος Συμβάντος:</label>
+  <select id="incident_type" name="incident_type" required>
+    <option value="">Επιλέξτε...</option>
+    <option value="fire">Πυρκαγιά</option>
+    <option value="accident">Ατύχημα</option>
+  </select><br><br>
+
+  <label for="description">Περιγραφή:</label>
+  <input type="text" id="description" name="description" required><br><br>
+
+  <label for="user_type">Τύπος Χρήστη:</label>
+  <select id="user_type" name="user_type" required>
+    <option value="">Επιλέξτε...</option>
+    <option value="guest">Επισκέπτης</option>
+    <option value="admin">Διαχειριστής</option>
+    <option value="user">Χρήστης</option>
+  </select><br><br>
+
+  <label for="user_phone">Τηλέφωνο Χρήστη:</label>
+  <input type="text" id="user_phone" name="user_phone" required><br><br>
+
+  <label for="address">Διεύθυνση:</label>
+  <input type="text" id="address" name="address" required><br><br>
+
+  <label for="lat">Γεωγραφικό Πλάτος:</label>
+  <input type="text" id="lat" name="lat"><br><br>
+
+  <label for="lon">Γεωγραφικό Μήκος:</label>
+  <input type="text" id="lon" name="lon"><br><br>
+
+  <label for="prefecture">Νομός:</label>
+  <select id="prefecture" name="prefecture">
+    <option value="">Επιλέξτε...</option>
+    <option value="heraklion">Ηράκλειο</option>
+    <option value="chania">Χανιά</option>
+    <option value="rethymno">Ρέθυμνο</option>
+    <option value="lasithi">Λασίθι</option>
+  </select><br><br>
+
+  <label for="municipality">Δήμος:</label>
+  <input type="text" id="municipality" name="municipality"><br><br>
+
+  <button type="submit" onclick="addIncident()">Υποβολή</button>
+
+  <div id="msg">
+
+  </div>
+</form>
+
+<form id="incidentGet">
+  <label for="typeget">Τύπος:</label>
+  <input type="text" id="typeget" name="typeget"><br><br>
+
+  <label for="statusget">Κατάσταση:</label>
+  <input type="text" id="statusget" name="statusget" ><br><br>
+
+  <label for="municipalityget">Δήμος (Προαιρετικό):</label>
+  <input type="text" id="municipalityget" name="municipalityget"><br><br>
+
+
+
+  <button type="button" onclick="getIncidents()">Λήψη Συμβάντων</button>
+  <div id="msgGet">
+
+  </div>
+</form>
+
+<form id="incidentPut">
+  <label for="putid">ID Συμβάντος:</label>
+  <input type="text" id="putid" name="putid"><br><br>
+
+  <label for="putstatus">Κατάσταση:</label>
+  <input type="text" id="putstatus" name="putstatus" ><br><br>
+
+
+  <button type="button" onclick="putIncident()">Ενημέρωση Συμβάντος</button>
+  <div id="msgPut"> </div>
+</form>
+
+<form id="incidentDel">
+  <label for="delid">ID Συμβάντος προς Διαγραφή:</label>
+  <input type="text" id="delid" name="delid"><br><br>
+
+
+
+  <button type="button" onclick="delIncident()">Διαγραφή Συμβάντος</button>
+  <div id="msgDel"> </div>
+</form>
+
+</body>
+</html>

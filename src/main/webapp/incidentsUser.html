@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Μιχαλης Γερογιαννακης,Μάριος Βολονάκης">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/incidents.js" ></script>
+    <script src="js/logged.js" ></script>
+    <script src="js/message.js" ></script>
+    <link rel="stylesheet" href="css/incidentsUser.css">
+    <iframe src="map.html" style="width: 30%; height: 100vh; border: none; position: fixed; left: 0; top: 0;"></iframe>
+
+
+    <title>Incidents Page</title>
+
+</head>
+<body>
+
+<h1>Incident Report Form</h1>
+
+<form id="incidentForm">
+    <label for="incident_type">Incident Type:</label>
+    <select id="incident_type" name="incident_type" required>
+        <option value="">Select...</option>
+        <option value="fire">Fire</option>
+        <option value="accident">Accident</option>
+    </select><br><br>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="4" cols="50"></textarea>
+
+    <label for="user_phone">User Phone:</label>
+    <input type="text" id="user_phone" name="user_phone" required><br><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required><br><br>
+
+
+    <label for="prefecture">Prefecture:</label>
+    <select id="prefecture" name="prefecture">
+        <option value="">Select...</option>
+        <option value="heraklion">Heraklion</option>
+        <option value="chania">Chania</option>
+        <option value="rethymno">Rethymno</option>
+        <option value="lasithi">Lasithi</option>
+    </select><br><br>
+
+    <label for="municipality">Municipality:</label>
+    <input type="text" id="municipality" name="municipality"><br><br>
+
+    <button type="submit" onclick="addIncidentUser()">Submit</button>
+
+    <div id="msg">
+
+    </div>
+</form>
+</body>
+</html>

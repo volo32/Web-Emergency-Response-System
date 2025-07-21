@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Φορμα Εγγραφής">
+  <meta name="keywords" content="Εγγραφή,register">
+  <meta name="author" content="Μιχαλης Γερογιαννακης">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="css/login.css">
+  <script src="js/ajax.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/logged.js"></script>
+  <script src="js/info.js"></script>
+  <script src="js/admin32.js"></script>
+  <script src="js/notifications.js" ></script>
+
+  <script>
+    $(document).ready(function () {
+      // Trigger InfoGET when the document is ready
+      isLoggedIn();
+    });
+  </script>
+  <title>Login Page</title>
+</head>
+<body>
+<div class="links-container">
+  <a href="index.html" class="styled-link">Not Registered.</a>
+  <a href="Lobby.html" class="styled-link">Back to Lobby.</a>
+</div>
+
+
+<form id="LoginForm" name="LoginForm" onsubmit="loginPOST(); return false;">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+
+  <label for="password">Password:</label>
+  <input type="password" name="password" id="password" required>
+
+  <input type="submit" class="button" value="Login">
+
+  <h1 id="CheckLogin"></h1>
+
+  <div id="infoContent"></div>
+
+
+</form>
+
+<form id="incidentRegisterUser"></form>
+
+</body>
+</html>

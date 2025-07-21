@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #141e30, #243b55);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.admin-navigation {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.admin-navigation button {
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.5);
+}
+
+.admin-navigation button:hover {
+    background: linear-gradient(90deg, #1e6fa9, #165e8b);
+    transform: translateY(-3px);
+}
+
+
+.tables-field {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    min-height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow-x: auto;
+}
+
+.tables-field table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+thead {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: white;
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tables-field {
+    scroll-behavior: smooth;
+}
+
+.tables-field::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tables-field::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 10px;
+}
+
+.tables-field::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}

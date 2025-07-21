@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Μιχάλης Γερογιαννάκης, Μάριος Βολονάκης">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/adminlogin.css">
+    <script src="js/adminlogin.js"></script>
+    <script src="js/login.js"></script>
+
+    <title>Σύνδεση Διαχειριστή</title>
+
+</head>
+<body>
+<div class="container">
+    <h1>Σύνδεση Διαχειριστή</h1>
+    <form id="adminLoginForm">
+        <input type="text" id="username" placeholder="Όνομα Χρήστη" required />
+        <input type="password" id="password" placeholder="Κωδικός Πρόσβασης" required />
+        <button type="button" onclick="handleLogin()">Σύνδεση</button>
+    </form>
+    <p id="errorMessage" class="error"></p>
+</div>
+
+</body>
+</html>

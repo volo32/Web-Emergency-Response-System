@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Μιχάλης Γερογιαννάκης, Μάριος Βολονάκης">
+    <title>Lobby Διαχειριστή</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/admin32.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/stats.js"></script>
+    <link rel="stylesheet" href="css/adminlobby.css">
+</head>
+<body>
+<div class="admin-navigation">
+    <button type="button" onclick="loadIncidents();document.getElementById('ButtonSave').style.display='block'">Πίνακας Συμβάντων</button>
+    <button type="button" onclick="loadMessages()">Πίνακας Μηνυμάτων</button>
+    <button type="button" onclick="loadVolunteers()">Πίνακας Εθελοντών</button>
+    <button type="button" onclick="drawCharts()">Προβολή Στατιστικών</button>
+</div>
+
+<div class="tables-field" id="tables-field"></div>
+
+<button type="submit" id="ButtonSave" style="display: none;" onclick="extractTableDataAsJSON()">Αποθήκευση Αλλαγών</button>
+<button type="button" onclick="showFieldsForNewIncident()">Καταχώρηση Νέου Περιστατικού</button>
+
+<form id="adminIncidentRegister">
+    <div id="IncidentRegister" onsubmit="adminIncidentPOST()"></div>
+</form>
+
+<div id="CheckStatus"></div>
+
+<div id="piechart" style="width: 900px; height: 500px; margin-top: 20px;"></div>
+<div id="barchart_users" style="width: 900px; height: 500px; margin-top: 20px;"></div>
+<div id="barchart_vehicles" style="width: 900px; height: 500px; margin-top: 20px;"></div>
+</body>
+</html>

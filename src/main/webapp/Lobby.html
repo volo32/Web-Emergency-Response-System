@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lobby">
+    <meta name="keywords" content="Κεντρικό, Hub, Lobby">
+    <meta name="author" content="Μιχάλης Γερογιαννάκης, Μάριος Βολονάκης">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/Lobby.js"></script>
+    <script src="js/ChatGPT.js"></script>
+    <link rel="stylesheet" href="css/lobby.css">
+    <iframe src="map.html" style="width: 30%; height: 100vh; border: none; position: fixed; left: 0; top: 0;"></iframe>
+</head>
+<body>
+<header>
+    <h1>Καλώς ήρθατε στο Lobby!</h1>
+</header>
+
+<div class="container">
+    <p>Επιλέξτε τύπο χρήστη και ενέργεια:</p>
+
+    <div class="user-selection">
+        <div class="user-type">
+            <h2>Απλός Χρήστης</h2>
+            <button onclick="location.href='/HY359_ask2_war_exploded/login.html'">Σύνδεση</button>
+            <button onclick="location.href='/HY359_ask2_war_exploded/index.html'">Εγγραφή</button>
+        </div>
+
+        <div class="user-type">
+            <h2>Εθελοντής Πυροσβέστης</h2>
+            <button onclick="location.href='/HY359_ask2_war_exploded/login.html'">Σύνδεση</button>
+            <button onclick="location.href='/HY359_ask2_war_exploded/index.html'">Εγγραφή</button>
+        </div>
+
+        <div class="user-type">
+            <h2>Επισκέπτης</h2>
+            <button onclick="location.href='indexVisitor.html'">Σύνδεση</button>
+        </div>
+
+        <div class="active-event">
+            <h2>Ενεργά Περιστατικά</h2>
+            <button onclick="location.href='active_incidents.html'">Δείτε Εδώ</button>
+        </div>
+    </div>
+</div>
+
+<div class="footer-links">
+    <a href="https://www.facebook.com/fireservice.gr?locale=el_GR" target="_blank">Facebook Πυροσβεστικής</a>
+    <a href="https://civilprotection.gov.gr/arxeio-imerision-xartwn" target="_blank">Πολιτική Προστασία</a>
+    <a href="https://www.fireservice.gr/el" target="_blank">Ιστοσελίδα Πυροσβεστικής</a>
+    <a href="https://www.youtube.com/watch?v=oqRtE026bas" target="_blank">Μυστηριώδης Σύνδεσμος</a>
+</div>
+
+</body>
+</html>

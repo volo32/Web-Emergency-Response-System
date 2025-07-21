@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Μιχαλης Γερογιαννακης,Μάριος Βολονάκης">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map with Toolbar</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="js/map.js"></script>
+    <link rel="stylesheet" href="css/map.css">
+
+
+</head>
+<body onload="initMap()">
+<div id="map"></div>
+
+<div class="toolbar">
+    <button onclick="resetMap()">Επαναφορά</button>
+    <button onclick="zoomIn()">Μεγέθυνση</button>
+    <button onclick="zoomOut()">Σμίκρυνση</button>
+</div>
+</body>
+</html>

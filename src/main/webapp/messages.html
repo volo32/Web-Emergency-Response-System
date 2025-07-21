@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/message.js"></script>
+    <link rel="stylesheet" href="css/message.css">
+    <title>Messages</title>
+</head>
+<body>
+<div id="chat-selection"></div>
+<div id="chat-section"></div>
+
+<form id="ChatForm">
+
+  <label for="chat-content"></label>
+  <textarea id="chat-content" name="chat-content"></textarea>
+
+  <label for="chat-receiver">Παραλήπτες</label>
+  <select id="chat-receiver"name="chat-receiver">
+    <option value="public">Σε όλους</option>
+    <option value="private">Μόνο Εθελοντές</option>
+  </select>
+
+</form>
+<button id="sendButton" type="button" onclick="MessagePOST();">Αποστολή</button>
+</body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    // Trigger InfoGET when the document is ready
+    MessagesChatSelectionGET();
+  });
+</script>
